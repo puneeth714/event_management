@@ -1,0 +1,5 @@
+{
+    "inputUri" : "gs://agent-bucket-event-manage/send1.mp4",
+    "features" : ["FACE_DETECTION"]
+
+}

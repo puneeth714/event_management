@@ -12,6 +12,7 @@ export SA_EMAIL="@YOUR_PROJECT_ID.iam.gserviceaccount.com"
 gsutil mb -l us-central1 gs://video-intelligence/
 
 gsutil cp send1.mp4 gs://video-intelligence/send1.mp4
+cam_angle3.mp4
 gs://agent-bucket-event-manage/send1.mp4
 gsutil cp gs://video-intelligence/send1.mp4 gs://event_safety.mp4
 export SA_NAME="crowd-sensor-sa"
