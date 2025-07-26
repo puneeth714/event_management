@@ -9,7 +9,8 @@ video_client = videointelligence.VideoIntelligenceServiceClient()
 bq_client = bigquery.Client()
 
 # Parameters
-GCS_URI = "gs://<BUCKET_NAME>/path/to/video.mp4"
+GCS_URI = "gs://agent-bucket-event-manage/send1.mp4"
+
 BQ_OBJECT_TABLE = f"{os.environ['PROJECT_ID']}.video_ai.object_annotations"
 BQ_FACE_TABLE   = f"{os.environ['PROJECT_ID']}.video_ai.face_annotations"
 

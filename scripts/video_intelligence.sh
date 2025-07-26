@@ -7,9 +7,16 @@ gcloud services enable \
   bigquery.googleapis.com \
   iam.googleapis.com
 
-gsutil mb -l us-central1 gs://video-intelligence
+export SA_EMAIL="@YOUR_PROJECT_ID.iam.gserviceaccount.com"
 
+gsutil mb -l us-central1 gs://video-intelligence/
+
+gsutil cp send1.mp4 gs://video-intelligence/send1.mp4
+gs://agent-bucket-event-manage/send1.mp4
+gsutil cp gs://video-intelligence/send1.mp4 gs://event_safety.mp4
 export SA_NAME="crowd-sensor-sa"
+export SA_EMAIL="$SA_NAME@$PROJECT_ID.iam.gserviceaccount.com"
+
 gcloud iam service-accounts create $SA_NAME \
   --display-name="Video Intelligence SA"
 

@@ -1,0 +1,2 @@
+https://arxiv.org/pdf/2502.07601
+https://github.com/xiaobai1217/Awesome-Video-Datasets?tab=readme-ov-file#Anomaly-Detection
