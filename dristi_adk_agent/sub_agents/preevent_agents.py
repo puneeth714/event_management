@@ -4,8 +4,11 @@ from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
 import googlemaps
 import random
-
-gmaps = googlemaps.Client(key="YOUR_MAPS_API_KEY")
+import os
+# load environment variables
+from dotenv import load_dotenv
+load_dotenv()
+gmaps = googlemaps.Client(key=os.getenv("NEXT_PUBLIC_GOOGLE_MAPS_API_KEY"))
 
 def plan_pre_event(map_image_url: str, cameras: list, expected_attendance: int) -> dict:
     # 1. Georeference (stub)
@@ -18,9 +21,7 @@ def plan_pre_event(map_image_url: str, cameras: list, expected_attendance: int) 
     return {"placements": placements, "staff_plan": staff_plan}
 
 preevent_tool = FunctionTool(
-    name="plan_pre_event",
-    description="Optimize camera and staff placement before event",
-    func=plan_pre_event,
+    plan_pre_event
 )
 
 preevent_agent = LlmAgent(

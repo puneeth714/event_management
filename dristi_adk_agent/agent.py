@@ -6,9 +6,14 @@ from .sub_agents.anamoly_agents import anomaly_agent#, anomaly_runner
 from .sub_agents.lostfound_agents import lostfound_agent#, lostfound_runner
 from .sub_agents.preevent_agents import preevent_agent#, preevent_runner
 
+#load env
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
 root_agent = LlmAgent(
     name="central_manager",
-    model="gemini-2.5-pro",
+    model="gemini-2.5-flash",
     description="Orchestrates all Drishti agents.",
     instruction=(
         "Route tasks to crowd_analysis, anomaly_detector, lost_and_found, or pre_event_planner "

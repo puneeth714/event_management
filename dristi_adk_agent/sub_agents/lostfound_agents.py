@@ -3,12 +3,10 @@ from google.adk.tools import FunctionTool
 from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
 # Assume face_matcher is your implementation
-from your_face_module import find_last_seen as face_find
-
+#from ..your_face_module import find_last_seen as face_find
+from ..utils.your_face_moudle import find_last_seen as face_find
 lostfound_tool = FunctionTool(
-    name="find_last_seen",
-    description="Given an image URL, return last seen camera and timestamp",
-    func=face_find,
+    face_find
 )
 
 lostfound_agent = LlmAgent(

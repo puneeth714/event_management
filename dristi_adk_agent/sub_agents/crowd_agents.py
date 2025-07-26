@@ -30,9 +30,7 @@ def query_crowd(start_time: str, end_time: str, bounds_geojson: str) -> dict:
     return {"points": rows}
 
 crowd_tool = FunctionTool(
-    name="query_crowd",
-    description="Get crowd counts per geolocation between times",
-    func=query_crowd,
+    query_crowd
 )
 
 crowd_analysis_agent = LlmAgent(

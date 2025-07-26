@@ -41,9 +41,7 @@ def detect_anomaly(start_time: str, end_time: str) -> dict:
     return {"anomalies": anomalies}
 
 anomaly_tool = FunctionTool(
-    name="detect_anomaly",
-    description="Detect crowd density anomalies",
-    func=detect_anomaly,
+    detect_anomaly
 )
 
 anomaly_agent = LlmAgent(
