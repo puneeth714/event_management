@@ -1,0 +1,7 @@
+.aider*
+google-cloud-sdk
+venv
+Data_Driven_Crowd_Dataset
+google-cloud*
+**.pyc
+*.mp4

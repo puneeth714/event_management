@@ -1,0 +1,17 @@
+1. ingest data to streams
+    - The steam should have this specifications h.264 codec , <=1080p res and 25fps 
+    - command ffmped -i $video -vf "fps=25" -c:v libx264 -crf 23 -preset medium -c:a copy $output_video
+    - send video to google vertex ai stream 
+        export GOOGLE_APPLICATION_CREDENTIALS="vertexvision.json"
+        vaictl -p sanskaraai          -l us-central1          -c application-cluster-0          --service-endpoint visionai.googleapis.com send video-file to streams crowd-manage   --file-path send1.mp4 --loop
+    - sending file into the application instead of stream
+    
+2. get stream from the ai model
+configure adk to use vertex ai - test it 
+3. outputl visualization / get stream from ingest stream
+4. google maps point to point route direction
+5. how llm's access the realtime video feed analytics
+6. given an event map plan the camera placement, commanders placemnet, conjution points detections and plan to mitigate that.
+7. how the dispatch of commanders happen when an accident happens - let each cam has geo location , commanders has geo loc , using maps for the path calc
+8. given an image and using realtime video feed and data in vertex warehouse , scan for the face
+9. anomaly detection practical example

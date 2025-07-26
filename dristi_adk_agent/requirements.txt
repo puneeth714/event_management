@@ -1,0 +1,6 @@
+google-adk 
+google-cloud-vision 
+google-cloud-bigquery 
+googlemaps 
+fastapi 
+uvicorn
